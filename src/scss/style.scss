@@ -1,4 +1,8 @@
 // Main Sass File
+@import '../../node_modules/bootstrap/scss/_functions.scss';
+@import '../../node_modules/bootstrap/scss/_variables.scss';
+@import '../../node_modules/bootstrap/scss/mixins/_breakpoints.scss';
+
 $bg-color:#333;
 $font-color:#fff;
 $primary-color: #008ed6;
@@ -17,9 +21,14 @@ body {
 
 #home-section {
     background: url('../img/bannerbaseH700.jpg') no-repeat;
+   
     min-height: 700px;
     background-size: cover;
     background-attachment: fixed;
+    @include media-breakpoint-down(sm){
+        min-height: 1100px;
+    }
+    
     .dark-overlay {
         background-color: $dark-overlay;
         position: absolute;
