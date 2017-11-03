@@ -4,7 +4,7 @@ body {
 
 .navbar {
   border-bottom: #008ed6 3px solid;
-  opacity: 0.8; }
+  opacity: 0.7; }
 
 #home-section {
   background: url("../img/bannerbaseH700.jpg") no-repeat;
@@ -15,7 +15,7 @@ body {
     #home-section {
       min-height: 1100px; } }
   #home-section .dark-overlay {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 0;
     left: 0;
