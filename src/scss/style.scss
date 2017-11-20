@@ -15,8 +15,8 @@ body {
 }
 
 .navbar {
-    border-bottom: $primary-color 3px solid;
-    opacity: 0.7;
+    border-bottom: $primary-color 2px solid;
+    opacity: 0.9;
 }
 
 #home-section {
@@ -58,7 +58,7 @@ body {
     }
   }
   
-  #create-section{
+  #activities-section{
     .fa{
       color:$primary-color;
       background:#fff;
