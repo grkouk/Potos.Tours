@@ -3,17 +3,44 @@
 
 <head>
     <meta charset="utf-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico">
+    <link rel="alternate" href="http://potos.tours/"  hreflang="x-default" />
+    <link rel="alternate" href="http://potos.tours/index.html"  hreflang="en" />
+    <link rel="alternate" href="http://potos.tours/index.el-GR.html"  hreflang="el-GR" />
     <title>Potos.Tours</title>
+    <script type="application/ld+json">
+    {
+        "@content":"http://schema.org",
+        "@type":"TravelAgency",
+        "name":"Potos.Tours",
+        "description":"Your guide to unforgettable holidays in Potos Thassos.",
+        "url": "http://potos.tours",
+        "logo": "http://potos.tours/img/potostourslogo.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "GR",
+            "postalCode": "64002",
+            "streetAddress": "Potos Thassos"
+          },
+          "publicAccess": true,
+          "availableLanguage":[
+            "English",
+            "Greek"
+          ],
+          "telephone": ["+302593053013","+306955613371"],
+          "sameAs": "http://potos.tours",
+          "email": "info@potos.tours",
+          "image": "http://potos.tours/Img/potostourslogo.jpg"
+    }
+    </script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white">
 
         <a class="navbar-brand" href="index.html">
             <img src="Img/Potos.Tours2.png" width="30" height="30" class="d-inline-block align-top" alt="">Potos.Tours
@@ -41,7 +68,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.el-GR.html">
+                    <a class="nav-link" href="#">
                         <img class="d-inline-block align-top" src="img/fgGreece.png" />
                     </a>
                 </li>
@@ -159,10 +186,10 @@
     <section id="accommodation-section" class="bg-light text-muted py-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div id="accommodationImage" class="col-md-6">
                     <img src="img/accommodation.jpg" alt="" class="img-fluid mb-3 rounded-circle">
                 </div>
-                <div class="col-md-6">
+                <div id="accommodationDetails" class="col-md-6">
                     <h3>Accommodation </h3>
                     <p>We take care of everything, so you can enjoy your holidays without the hassle of meaningless details.
                     </p>
@@ -187,36 +214,34 @@
         </div>
     </section>
 
-    <!-- CREATE HEAD -->
+    <!-- ACTIVITIES HEAD -->
     <section id="activities-head-section" class="bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col text-center">
                     <div class="p-5">
                         <h1 class="display-4">Activities</h1>
-                        <p class="lead">In Potos you can find all kind of Activities. Clubbing, Boat Trips, Car Rentals, Bike Rentals quam
-                            modi eos vero magni consectetur.</p>
-                        <a href="#" class="btn btn-outline-light">Find Out More</a>
+                        <p class="lead">In Potos you can find all kind of Activities. Clubbing, Boat Trips, Car Rentals, Bike Rentals.</p>
+                        <a href="#" class="btn btn-outline-light">Fill out your requirements form</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CREATE SECTION -->
+    <!-- ACTIVITIES SECTION -->
     <section id="activities-section" class="py-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <h3>Live Your Passion</h3>
-                    <p>Clubbing, car rentals, bike rentals, Jeep safaries, Paraglide, Boat trips etc. You can consequuntur quidem
-                        ipsam ipsa.</p>
+                    <p>Car rentals, Bike rentals, Jeep safaries, Paraglide, Boat trips etc. </p>
                     <div class="d-flex flex-row">
                         <div class="p-4 align-self-start">
                             <i class="fa fa-check"></i>
                         </div>
                         <div class="p-4 align-self-end">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, quaerat cupiditate quia voluptate voluptatum repellendus?
+                            Information direct from the source 
                         </div>
                     </div>
                     <div class="d-flex flex-row">
@@ -224,7 +249,15 @@
                             <i class="fa fa-check"></i>
                         </div>
                         <div class="p-4 align-self-end">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, quaerat cupiditate quia voluptate voluptatum repellendus?
+                            We handle the details. You enjoy the activity 
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="p-4 align-self-start">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="p-4 align-self-end">
+                            No extra cost for you. 
                         </div>
                     </div>
                 </div>
@@ -271,7 +304,7 @@
         });
     </script>
     <script>
-        var myCookie = "Test";
+        var myCookie = "PotosToursLocale";
 
         var cookieExist = getCookie(myCookie);
         // if (!cookieExist) {
@@ -279,7 +312,7 @@
         // } else {
         //     alert("Cookie value" + myCookie);
         // }
-        window.sr = ScrollReveal();
+        window.sr = ScrollReveal({reset:true});
 
         sr.reveal('.navbar', {
             duration: 500,
@@ -323,6 +356,21 @@
             delay: 2400,
             distance: '300px',
             origin: 'bottom'
+        });
+        //Accommodation section
+        sr.reveal('#accommodationImage',{
+            duration: 3000
+            //delay: 2400,
+            //distance: '300px',
+            //opacity:0
+            //origin: 'bottom'
+        });
+        sr.reveal('#accommodationDetails',{
+            duration: 3000,
+            delay: 2000
+            //distance: '300px',
+            //opacity:0
+            //origin: 'bottom'
         });
     </script>
 </body>

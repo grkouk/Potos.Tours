@@ -8,15 +8,43 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="alternate" href="http://potos.tours/"  hreflang="x-default" />
+    <link rel="alternate" href="http://potos.tours/index.html"  hreflang="en" />
+    <link rel="alternate" href="http://potos.tours/index.el-GR.html"  hreflang="el-GR" />
     <link rel="icon" href="favicon.ico">
     <title>Potos.Tours</title>
+    <script type="application/ld+json">
+    {
+        "@content":"http://schema.org",
+        "@type":"TravelAgency",
+        "name":"Potos.Tours",
+        "description":"Your guide to unforgettable holidays in Potos Thassos.",
+        "url": "http://potos.tours",
+        "logo": "http://potos.tours/img/potostourslogo.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "GR",
+            "postalCode": "64002",
+            "streetAddress": "Potos Thassos"
+          },
+          "publicAccess": true,
+          "availableLanguage":[
+            "English",
+            "Greek"
+          ],
+          "telephone": ["+302593053013","+306955613371"],
+          "sameAs": "http://potos.tours",
+          "email": "info@potos.tours",
+          "image": "http://potos.tours/Img/potostourslogo.jpg"
+    }
+    </script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white">
 
         <a class="navbar-brand" href="index.html">
-            <img src="Img/Potos.Tours2.png" width="30" height="30" class="d-inline-block align-top" alt=""> Potos.Tours
+            <img src="Img/Potos.Tours2.png" width="30" height="30" class="d-inline-block align-top" alt="">Potos.Tours
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -25,26 +53,37 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#home-section">Αρχική </a>
+                    <a class="nav-link" href="#home-section">Home </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#explore-head-section">Εξερεύνηση</a>
+                    <a class="nav-link" href="#accommodation-head-section">Accommodation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#activities-head-section">Activities</a>
                 </li>
             </ul>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">
-                        <i class="fa fa-flag">English </i>
+                        <img class="d-inline-block align-top" src="img/fgBritish.png" />
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.el-GR.html">
-                        <i class="fa fa-flag">Greek</i>
+                    <a class="nav-link" href="#">
+                        <img class="d-inline-block align-top" src="img/fgGreece.png" />
                     </a>
                 </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img class="d-inline-block align-top" src="img/fgGermany.png" />
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img class="d-inline-block align-top" src="img/fgSerbia.png" />
+                        </a>
+                    </li>
+    
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
@@ -72,31 +111,35 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
-                            <h1>
-                                Meet our Island
-                            </h1>
+                            <h3>
+                                We are your guide for your vacation in
+                                <strong>Potos Thassos</strong>.
+
+                            </h3>
                             <div id="meetisland1" class="d-flex flex-row">
-                                <div class="p-4 align-self-start">
+                                <div class="p-2 align-self-start">
                                     <i class="fa fa-check"></i>
                                 </div>
-                                <div class="p-4 align-self-end">
-                                    jlkkdjflsjdfjsldjsljflsjflksjflsjdf
+                                <div class="p-2  align-self-end">
+                                    Find
+                                    <strong>Accommodation</strong> based on your requirements
                                 </div>
                             </div>
                             <div id="meetisland2" class="d-flex flex-row">
-                                <div class="p-4 align-self-start">
+                                <div class="p-2 align-self-start">
                                     <i class="fa fa-check"></i>
                                 </div>
-                                <div class="p-4 align-self-end">
-                                    jlkkdjflsjdfjsldjsljflsjflksjflsjdf
+                                <div class="p-2 align-self-end">
+                                    Information about all the
+                                    <strong>sights</strong> you need to visit
                                 </div>
                             </div>
                             <div id="meetisland3" class="d-flex flex-row">
-                                <div class="p-4 align-self-start">
+                                <div class="p-2 align-self-start">
                                     <i class="fa fa-check"></i>
                                 </div>
-                                <div class="p-4 align-self-end">
-                                    jlkkdjflsjdfjsldjsljflsjflksjflsjdf
+                                <div class="p-2 align-self-end">
+                                    <strong>With no cost for you</strong>
                                 </div>
                             </div>
                         </div>
@@ -122,38 +165,41 @@
         </div>
     </header>
 
-    <!--Explore Head -->
-    <section id="explore-head-section">
+    <!--accommodation Head -->
+    <section id="accommodation-head-section">
         <div class="container">
             <div class="row">
                 <div class="col text-center">
                     <div class="p-5">
-                        <h1 class="display-4">Explore</h1>
-                        <p class="lead">Loremj sakj lasjd al dladj lajd lajd la dla sdlad lak dladj lakdj lajd lasd laj dslajd s</p>
-                        <a href="#" class="btn btn-outline-secondary">Find out more</a>
+                        <h1 class="display-4">Accommodation</h1>
+                        <p class="lead">In Potos you can find all kind of accommodation. Hotels, studios, appartments, camping. We provide
+                            you with proposals about accommodation based on your requirements.
+
+                        </p>
+                        <a href="#" class="btn btn-outline-secondary ">Fill out your requirements form</a>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
-    <!-- EXPLORE SECTION -->
-    <section id="explore-section" class="bg-light text-muted py-5">
+    <!-- accommodation SECTION -->
+    <section id="accommodation-section" class="bg-light text-muted py-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div id="accommodationImage" class="col-md-6">
                     <img src="img/accommodation.jpg" alt="" class="img-fluid mb-3 rounded-circle">
                 </div>
-                <div class="col-md-6">
-                    <h3>Explore & Connect</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur qui molestiae optio animi architecto,
-                        labore voluptatem dolor, excepturi vero doloribus quo quam reprehenderit aperiam temporibus eveniet
-                        consequuntur quidem ipsam ipsa.</p>
+                <div id="accommodationDetails" class="col-md-6">
+                    <h3>Accommodation </h3>
+                    <p>We take care of everything, so you can enjoy your holidays without the hassle of meaningless details.
+                    </p>
                     <div class="d-flex flex-row">
                         <div class="p-4 align-self-start">
                             <i class="fa fa-check"></i>
                         </div>
                         <div class="p-4 align-self-end">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, quaerat cupiditate quia voluptate voluptatum repellendus?
+                            Reservation, check in time, how to get to your hotel
                         </div>
                     </div>
                     <div class="d-flex flex-row">
@@ -161,7 +207,7 @@
                             <i class="fa fa-check"></i>
                         </div>
                         <div class="p-4 align-self-end">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, quaerat cupiditate quia voluptate voluptatum repellendus?
+                            Information about ferries, maps, flights
                         </div>
                     </div>
                 </div>
@@ -169,37 +215,34 @@
         </div>
     </section>
 
-    <!-- CREATE HEAD -->
-    <section id="create-head-section" class="bg-primary">
+    <!-- ACTIVITIES HEAD -->
+    <section id="activities-head-section" class="bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col text-center">
                     <div class="p-5">
-                        <h1 class="display-4">Create</h1>
-                        <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque ut perferendis nostrum, nulla facere
-                            quam modi eos vero magni consectetur.</p>
-                        <a href="#" class="btn btn-outline-light">Find Out More</a>
+                        <h1 class="display-4">Activities</h1>
+                        <p class="lead">In Potos you can find all kind of Activities. Clubbing, Boat Trips, Car Rentals, Bike Rentals.</p>
+                        <a href="#" class="btn btn-outline-light">Fill out your requirements form</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CREATE SECTION -->
-    <section id="create-section" class="py-5">
+    <!-- ACTIVITIES SECTION -->
+    <section id="activities-section" class="py-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h3>Create Your Passion</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur qui molestiae optio animi architecto,
-                        labore voluptatem dolor, excepturi vero doloribus quo quam reprehenderit aperiam temporibus eveniet
-                        consequuntur quidem ipsam ipsa.</p>
+                    <h3>Live Your Passion</h3>
+                    <p>Car rentals, Bike rentals, Jeep safaries, Paraglide, Boat trips etc. </p>
                     <div class="d-flex flex-row">
                         <div class="p-4 align-self-start">
                             <i class="fa fa-check"></i>
                         </div>
                         <div class="p-4 align-self-end">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, quaerat cupiditate quia voluptate voluptatum repellendus?
+                            Information direct from the source 
                         </div>
                     </div>
                     <div class="d-flex flex-row">
@@ -207,12 +250,20 @@
                             <i class="fa fa-check"></i>
                         </div>
                         <div class="p-4 align-self-end">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, quaerat cupiditate quia voluptate voluptatum repellendus?
+                            We handle the details. You enjoy the activity 
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="p-4 align-self-start">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="p-4 align-self-end">
+                            No extra cost for you. 
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <img src="img/Accommodation.jpg" alt="" class="img-fluid mb-3 rounded-circle">
+                    <img src="img/parasail.jpg" alt="" class="img-fluid mb-3 rounded-circle">
                 </div>
             </div>
         </div>
@@ -222,6 +273,19 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scrollreveal.js"></script>
     <script src="js/site.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109922163-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-109922163-1');
+    </script>
+
     <script>
         $(function () {
             // Smooth Scrolling
@@ -241,7 +305,7 @@
         });
     </script>
     <script>
-        var myCookie = "Test";
+        var myCookie = "PotosToursLocale";
 
         var cookieExist = getCookie(myCookie);
         // if (!cookieExist) {
@@ -249,7 +313,7 @@
         // } else {
         //     alert("Cookie value" + myCookie);
         // }
-        window.sr = ScrollReveal();
+        window.sr = ScrollReveal({reset:true});
 
         sr.reveal('.navbar', {
             duration: 500,
@@ -293,6 +357,21 @@
             delay: 2400,
             distance: '300px',
             origin: 'bottom'
+        });
+        //Accommodation section
+        sr.reveal('#accommodationImage',{
+            duration: 3000
+            //delay: 2400,
+            //distance: '300px',
+            //opacity:0
+            //origin: 'bottom'
+        });
+        sr.reveal('#accommodationDetails',{
+            duration: 3000,
+            delay: 2000
+            //distance: '300px',
+            //opacity:0
+            //origin: 'bottom'
         });
     </script>
 </body>
