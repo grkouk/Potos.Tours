@@ -3,15 +3,14 @@
 
 <head>
     <meta charset="utf-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
     <link rel="alternate" href="http://potos.tours/"  hreflang="x-default" />
     <link rel="alternate" href="http://potos.tours/index.html"  hreflang="en" />
     <link rel="alternate" href="http://potos.tours/index.el-GR.html"  hreflang="el-GR" />
-    <link rel="icon" href="favicon.ico">
     <title>Potos.Tours</title>
     <script type="application/ld+json">
     {
@@ -60,6 +59,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#activities-head-section">Activities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact-head-section">Contact</a>
                 </li>
             </ul>
             <ul class="navbar-nav mr-auto">
@@ -139,7 +141,7 @@
                                     <i class="fa fa-check"></i>
                                 </div>
                                 <div class="p-2 align-self-end">
-                                    <strong>With no cost for you</strong>
+                                    <strong>FREE of charge for you</strong>
                                 </div>
                             </div>
                         </div>
@@ -268,6 +270,52 @@
             </div>
         </div>
     </section>
+
+ <!--contact Head -->
+ <section id="contact-head-section" class="bg-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <div class="p-5">
+                    <h1 class="display-4">Contact</h1>
+                    <p class="lead">Our contact information
+                        
+                    </p>
+                    <!-- <a href="#" class="btn btn-outline-secondary ">Fill out your requirements form</a> -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- contact SECTION -->
+<section id="contact-section" class="bg-light text-muted py-5">
+    <div class="container">
+        <div class="row">
+            <div id="accommodationDetails" class="col-md-4">
+                <h3>Contact </h3>
+                <p>We take care of everything, so you can enjoy your holidays without the hassle of meaningless details.
+                </p>
+                <address>
+                    Potos, Thassos<br />
+                    Greece<br />
+                    <abbr title="Phone">P:</abbr>
+                    +30 2593053013
+                </address>
+    
+                <address>
+                    <strong>Info:</strong> <a href="mailto:info@potos.tours">info@potos.tours</a><br />
+                    <strong>Sales:</strong> <a href="mailto:sales@potos.tours">sales@potos.tours</a>
+                </address>
+            </div>
+            <div id="dvMap" class="col-md-8 img-fluid rounded" style="height:450px">
+                <!-- <img src="img/accommodation.jpg" alt="" class="img-fluid mb-3 rounded-circle"> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -374,6 +422,34 @@
             //origin: 'bottom'
         });
     </script>
+     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbH6_TL15fk6BU8sNwaQtBN31lVeCLObI"></script>
+     <script type="text/javascript">
+         var markers = [{'title': 'Potos.Tours','lat': '40.6114292918345','lng': '24.6055099393095','description': 'Potos.Tours description'}];
+         window.onload = function () {
+             var mapOptions = {
+                 center: new google.maps.LatLng(markers[0].lat, markers[0].lng),
+                 zoom: 15,
+                 mapTypeId: google.maps.MapTypeId.ROADMAP
+             };
+             var infoWindow = new google.maps.InfoWindow();
+             var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+             for (i = 0; i < markers.length; i++) {
+                 var data = markers[i]
+                 var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+                 var marker = new google.maps.Marker({
+                     position: myLatlng,
+                     map: map,
+                     title: data.title
+                 });
+                 (function (marker, data) {
+                     google.maps.event.addListener(marker, "click", function (e) {
+                         infoWindow.setContent(data.description);
+                         infoWindow.open(map, marker);
+                     });
+                 })(marker, data);
+             }
+         }
+     </script>
 </body>
 
 </html>
